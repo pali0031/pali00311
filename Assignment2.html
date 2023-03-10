@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.box {
+  border:0px solid red;
+  margin:5px;
+  font-size: 0;
+  max-width: 600px;
+  --R:100px; /* radius */
+  --m:5px;   /* margin */
+  --t:10px;  /* distance from top */
+}
+
+div.box p {
+  width: 50%;
+  margin:0;
+  padding:0 var(--m);
+  display: inline-block;
+  vertical-align:top;
+  font-size: initial;
+  text-align: justify;
+}
+
+div.box p:before {
+  content: "";
+  width: var(--R);
+  height: calc(2*var(--R));
+  padding:var(--m) 0 var(--m) var(--m);
+  margin-top:var(--t);
+  background:var(--img) content-box;
+  background-size:200% 100%;
+  shape-outside: circle(var(--R) at var(--d,right) calc(-1*var(--m)) top calc(50% + var(--t)/2));
+  float: right;
+  border-radius: 500px 0 0 500px;
+  margin-right:calc(-1*var(--m));
+}
+
+div.box p:last-child:before {
+  float: left;
+  padding:var(--m) var(--m) var(--m) 0;
+  --d:left;
+  background-position:right;
+  border-radius:0 500px 500px 0;
+  margin-left:calc(-1*var(--m));
+  margin-right:0;
+}
+
+*,*::before,*::after {
+  box-sizing:border-box;
+}
+</style>
+</head>
+
+
+<body>
+<!-- https://stackoverflow.com/questions/52867877/wrapping-two-columns-of-text-around-an-image-shape-from-both-sides-html-css -->
+<h1>Ottawa Public Library</h1>
+<div class="box" style="--img:url(file:///Users/system/Downloads/Enid/book.png);--R:150px;--m:2px;--t:30px;">
+  <p>
+    Lorem ipsum dolor sit amet, consect etur adipisicing elit. Ex sapiente iste   asp ernatur, illum esse veniam eligendi, dolor conse quuntur iure, cumque laud antium quidem ratione perfe rendis minima digniss <br><br>Sed, placeat.Lorem ipsum dolor sit amet, consectetur adipis icing elit. Ex sap iente iste repudi andae aspe rnatur, illum esse veniam eligendi, dolor conseq uuntur iure,  illum esse veniam eligendi, dolor conseq uuntur iure,
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consect etur adipisicing elit. Ex sapiente iste   asp ernatur, illum esse veniam eligendi, dolor conse quuntur iure, cumque laud antium quidem ratione perfe rendis minima digniss <br><br>Sed, placeat.Lorem ipsum dolor sit amet, consectetur adipis icing elit. Ex sap iente iste repudi andae aspe rnatur, illum esse veniam eligendi, dolor conseq uuntur iure,  illum esse veniam eligendi, dolor conseq uuntur iure,
+  </p>
+
+</div>
+
+</body>
+</html>
