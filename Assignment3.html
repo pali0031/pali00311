@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <style>
+    h1:hover {
+        color: white;
+        background-color: pink;
+    }
+    .rotate {
+  animation: rotation 8s infinite linear;
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+#spinner {
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  transform-style: preserve-3d;
+  text-align:center;
+}
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+    </style>
+</head>
+ 
+<body>
+    <h1 align="center"> I love cats</h1>
+</body>
+<p> Look at my friend's cat! </p>
+<img src="nachothecat.jpg" class="rotate" style="width:400px;height:200px;">
+
+<p id="spinner">I hope you think he is a cute cat!</p>
+
+
+
+
+</html>
