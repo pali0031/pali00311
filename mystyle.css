@@ -2,8 +2,6 @@
   text-align: center;
   border: 0px solid green;
 }
-</style>
-<style>
 body {
   color: maroon;
 }
@@ -11,8 +9,6 @@ body {
 h1 {
   color: #05014a;
 }
-</style>
-<style>
       .container {
         display: flex;
         align-items: center;
