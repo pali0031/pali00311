@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>Fahrenheit to Celcius Temperature Converter</title>
+<body>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+
+<div class="center">
+  <h1>Temperature Converter
+ </h1>
+</div>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img src=https://media.istockphoto.com/id/1241122066/vector/thermometer.jpg?s=612x612&w=0&k=20&c=fA9vn-nK7G5B7Zf5LuH4IRSggeGcarBbslrFsuCsaCg=>
+      </div>
+      <div class="text">
+  
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+      </div>
+    </div>
+</body>
+</html>
+
