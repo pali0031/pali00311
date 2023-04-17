@@ -1,0 +1,32 @@
+<style>
+.center {
+  text-align: center;
+  border: 0px solid green;
+}
+</style>
+<style>
+body {
+  color: maroon;
+}
+
+h1 {
+  color: #05014a;
+}
+</style>
+<style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      img {
+        max-width: 60%
+      }
+      .image {
+        flex-basis: 40%
+      }
+      .text {
+        font-size: 20px;
+        padding-left: 0px;
+      }
+    </style>
